@@ -1,0 +1,142 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background image - full screen, fixed, no transparency */
+.background-overlay {
+  background-image: url('images/room.jpg'); /* your local path here */
+  background-size: cover;           /* cover entire area */
+  background-position: center center; /* center the image */
+  background-repeat: no-repeat;      /* no repeat */
+  position: fixed;                   /* fixed so it stays on scroll */
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;                      /* behind everything */
+  filter: none;                    /* no dark filter */
+}
+
+/* Content container */
+.content {
+  position: relative;
+  max-width: 600px;
+  margin: 60px auto 100px;
+  background: transparent;  /* No transparency background */
+  padding: 40px 30px;
+  border-radius: 14px;
+  box-shadow: none;         /* no shadow */
+  border: none;             /* no border */
+  text-align: center;
+  color: #fff;
+}
+
+/* Headings */
+.content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* add some text shadow for readability */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+select, input[type="date"], input[type="time"] {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+select:focus, input[type="date"]:focus, input[type="time"]:focus {
+  box-shadow: 0 0 5px #00bcd4;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bcd4;
+  color: #121212;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+}
+
+button[type="submit"]:hover {
+  background-color: #0288a7;
+}
+
+/* Status & Bookings sections */
+.status, .bookings {
+  margin-bottom: 30px;
+}
+
+.status h2, .bookings h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+#statusMessage {
+  font-size: 1.1rem;
+  color: #ddd;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+#bookingList {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-left: 15px;
+  color: #eee;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+#bookingList li {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#clearBtn {
+  padding: 10px 20px;
+  background-color: #e53935;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#clearBtn:hover {
+  background-color: #b71c1c;
+}

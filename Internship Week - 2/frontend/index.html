@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SISPL Room Booking System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <div class="content container">
+    <h1>SISPL Room Booking System</h1>
+
+    <form id="bookingForm">
+      <label for="room">Select Room:</label>
+      <select id="room" required>
+        <option value="">-- Choose a Room --</option>
+        <option value="Boardroom A">Boardroom A</option>
+        <option value="Meeting Room 1">Meeting Room 1</option>
+        <option value="Huddle Space">Huddle Space</option>
+      </select>
+
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" required />
+
+      <label for="time">Select Time:</label>
+      <input type="time" id="time" required />
+
+      <button type="submit">Book Room</button>
+    </form>
+
+    <div class="status">
+      <h2>Booking Status</h2>
+      <p id="statusMessage">No bookings yet.</p>
+    </div>
+
+    <div class="bookings">
+      <h2>Upcoming Bookings</h2>
+      <!-- Room filter dropdown will be injected here by JS -->
+      <ul id="bookingList"></ul>
+      <button id="clearBtn">Clear All Bookings</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
