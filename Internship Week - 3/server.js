@@ -14,8 +14,8 @@ app.use(express.static('public'));
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'rakmomakin@gmail.com',
-    pass: 'ttkhwgstjpahvoxa',
+    user: 'usergmail.com',
+    pass: 'userpassword',
   },
 });
 
@@ -54,7 +54,7 @@ app.post('/api/book', (req, res) => {
       console.log('Booking saved successfully:', booking);
 
       const mailOptions = {
-        from: 'rakmomakin@gmail.com',
+        from: 'usergmail',
         to: booking.email,
         subject: '✅ Your Booking is Confirmed!',
         text: `
